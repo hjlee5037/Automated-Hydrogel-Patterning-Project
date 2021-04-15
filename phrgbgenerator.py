@@ -6,7 +6,6 @@ Once the RGB values of all pH's have been generated, we use excel except to remo
 To do this, we simple use find command and replace .png with nothing to only have the pH values.
 '''
 
-
 from PIL import Image
 import glob
 import os
