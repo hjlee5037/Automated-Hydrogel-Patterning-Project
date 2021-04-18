@@ -1,4 +1,3 @@
-
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
@@ -17,17 +16,13 @@ def build_network(x_train, y_train, x_test, y_test, model_name='pH_rgb_calibrati
     **Parameters**
 
         x_train: *numpy*
-            The set of training data, which should be an array of size
-            (95443, 1).
+            The set of training data, which should be 80% from dataset_x.
         y_train: *numpy*
-            The set of labels for the corresponding training data, which
-            should be an array of size (95443, 15).
+            The set of labels for the corresponding training data, which is 80% from dataset_y.
         x_test: *numpy.ndarray*
-            The set of testing data, which should be an array of size
-            (52657, 1).
+            The set of testing data, which is 20% from dataset_x.
         y_test: *numpy.ndarray*
-            The set of labels for the corresponding testing data, which should
-            be an array of size (52657, 15).
+            The set of labels for the corresponding testing data, which is 20% from dataset_y.
         model_name: *str*
             The filename of the model to be saved.
 
