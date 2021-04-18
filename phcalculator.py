@@ -122,15 +122,7 @@ if __name__ == '__main__':
     # Normalize the data to help with training
     x_train /= 255
     x_test /= 255
-
-    '''
-    Here, we convert classes using one-hot encoding. This means that we
-    convert:
-    0 -> [1,0,0,0,0,0,0,0,0,0]
-    1 -> [0,1,0,0,0,0,0,0,0,0]
-    2 -> [0,0,1,0,0,0,0,0,0,0]
-    and so on...
-    '''
+    
     n_classes = 15
     y_train = np_utils.to_categorical(y_train, n_classes)
     y_test = np_utils.to_categorical(y_test, n_classes)
