@@ -37,7 +37,7 @@ def build_network(x_train, y_train, x_test, y_test, model_name='pH_rgb_calibrati
     '''
     # Build the model
     model = Sequential([
-    Dense(32, activation='relu', input_shape=(15,)),
+    Dense(32, activation='relu'
     Dense(32, activation='relu'),
     Dense(1, activation='sigmoid'),
 ])
