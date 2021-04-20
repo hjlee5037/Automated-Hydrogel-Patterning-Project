@@ -11,6 +11,7 @@ The goal of this project is to use Python to generate a calculator that could id
 Output:
 In [1]: run phcalc_rfr.py
 MAE: 0.00095624643043381 <-- This is the mean absolute error
+
 MSE: 0.0029855053851068074 <-- This is the mean squared error
 
 Scatter plot of model performance:
