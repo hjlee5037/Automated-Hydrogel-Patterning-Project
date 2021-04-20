@@ -5,11 +5,10 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 
-def build_network(x_train, y_train, x_test, y_test, output_name="PH_performance.png"):
+def build_network(x_train, y_train, x_test, y_test, output_name="pH_performance_RFR.png"):
     '''
     This function holds the neural network model.
-    After building the model, the model is then trained and saved to a .h5
-    file.
+    After building the model, the model is then trained and saves an image file comparing the predicted and tested y (pH) values.
 
     **Parameters**
 
@@ -27,7 +26,7 @@ def build_network(x_train, y_train, x_test, y_test, output_name="PH_performance.
         model:
             A class object that holds the trained model.
     '''
-    # Build the model
+    # Build the Random Forest Regressor (RFR) model
     model = RandomForestRegressor(n_estimators = 100, random_state = 1)
     model.fit(x_train, y_train)
     y_predict = model.predict(x_test)
@@ -62,7 +61,7 @@ if __name__ == '__main__':
     y = dataset[:, 0]
     x_scale = x / 255
 
-    # Reserve 80% for training, and 20% for testing
+    # Reserve 80% for training, and 20% for testing. Rehsape data for 1 x 1 array.
     x_train, x_test, y_train, y_test = train_test_split(
         x_scale, y, test_size=0.2)
     x_train = x_train.reshape(58574, 1)
