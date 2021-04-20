@@ -12,9 +12,9 @@ import os
 import csv
 
 # We need to open a csv file to write the pH and rgb data
-with open('o.csv', 'w', newline='') as f_output:
+with open('dataset.csv', 'w', newline='') as f_output:
     csv_output = csv.writer(f_output)
-    csv_output.writerow(["ph", "R", "G", "B"])
+    csv_output.writerow(["ph", "Greyscale"])
 
     # We need to create a path to the file with png files labeled with pH in the range of 0-14
     for filename in glob.glob("*.png"):
@@ -30,7 +30,8 @@ with open('o.csv', 'w', newline='') as f_output:
         # Read the details of each pixel and write them to the csv file
         for x in range(width):
             for y in range(height):
-                R = pxl[x, y][0]
-                G = pxl[x, y][1]
-                B = pxl[x, y][2]
-                csv_output.writerow([filename, R, G, B])
+                r = pix[x, y][0]
+                g = pix[x, y][1]
+                b = pix[x, y][2]
+                c = (((0.299 * r) + (0.587 * g) + (0.114 * b)) / 3)
+                csv_output.writerow([filename, c])
