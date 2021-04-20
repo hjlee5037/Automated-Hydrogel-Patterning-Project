@@ -1,5 +1,6 @@
 '''
-This simple code generates RGB values from references images labeled with a pH value.
+This simple code generates RGB values from references images labeled with a pH value,
+convert to grayscale (according to their weights), and save data into a csv file.
 This code needs to be in the same folder as all the reference images.
 The output will be the file name (0-14.png), and their RGB values in seperate columns.
 Once the RGB values of all pH's have been generated, we use excel except to remove ".png".
@@ -33,5 +34,6 @@ with open('dataset.csv', 'w', newline='') as f_output:
                 r = pix[x, y][0]
                 g = pix[x, y][1]
                 b = pix[x, y][2]
+                # Calculate grayscale according to their weights
                 c = (((0.299 * r) + (0.587 * g) + (0.114 * b)) / 3)
                 csv_output.writerow([filename, c])
