@@ -35,9 +35,9 @@ printing train dataset:
  
  [ 0.  3.  4. ... 13. 13.  9.]
 
-MAE: 0.00095624643043381 <-- This is the mean absolute error
+MAE: 0.00095624643043381
 
-MSE: 0.0029855053851068074 <-- This is the mean squared error
+MSE: 0.0029855053851068074
 
 Scatter plot of model performance:
 PH_performance.png![PH_performance](https://user-images.githubusercontent.com/82513993/115449874-3dba3f00-a1e9-11eb-8c40-f7744a7f80cd.png)
