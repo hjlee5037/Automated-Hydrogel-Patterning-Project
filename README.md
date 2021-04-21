@@ -11,6 +11,21 @@ The goal of this project is to use Python to generate a calculator that could id
 Output:
 In [1]: run phcalc_rfr.py
 
+[[0.16840261]
+ [0.17898431]
+ [0.12039739]
+ ...
+ [0.10928889]
+ [0.21052941]
+ [0.16117778]] [10.  1.  0. ... 11.  5.  7.]
+[[0.12039739]
+ [0.28255294]
+ [0.24054641]
+ ...
+ [0.11503529]
+ [0.11503529]
+ [0.17221699]] [ 0.  3.  4. ... 13. 13.  9.]
+
 MAE: 0.00095624643043381 <-- This is the mean absolute error
 
 MSE: 0.0029855053851068074 <-- This is the mean squared error
