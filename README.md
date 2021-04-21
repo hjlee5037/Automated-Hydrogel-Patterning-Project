@@ -10,6 +10,7 @@ The goal of this project is to use Python to generate a calculator that could id
 
 Output:
 In [1]: run phcalc_rfr.py
+
 printing train dataset: 
 
 [[0.16840261]
