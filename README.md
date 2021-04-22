@@ -65,3 +65,9 @@ pH prediction:
 # Scatter plot of model performance:
 
 ![PH_performance_example](https://user-images.githubusercontent.com/82513993/115661940-422b4880-a30c-11eb-8e71-67c570d59da9.png)
+
+# References:
+
+1. https://www.javaer101.com/en/article/34524053.html
+2. https://www.geeksforgeeks.org/random-forest-regression-in-python/
+3. https://medium.com/ampersand-academy/random-forest-regression-using-python-sklearn-from-scratch-9ad7cf2ec2bb
