@@ -52,9 +52,11 @@ MSE: 0.0029855053851068074
 
 pH prediction:
 
-5.5.png, [5.43535556]
+5.5.png, [5.43350742]
+![5 5](https://user-images.githubusercontent.com/82513993/115789752-a04f3e80-a393-11eb-9cd0-946aa37dc07a.png)
 
-5.3.png, [5.25073928]
+5.8.png, [5.73453873]
+![5 8](https://user-images.githubusercontent.com/82513993/115789744-9d544e00-a393-11eb-8884-603ac7ecdccb.png)
 
 # Scatter plot of model performance:
 
