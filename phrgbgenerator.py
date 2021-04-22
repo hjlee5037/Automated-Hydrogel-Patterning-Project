@@ -35,5 +35,5 @@ with open('dataset.csv', 'w', newline='') as f_output:
                 g = pix[x, y][1]
                 b = pix[x, y][2]
                 # Calculate grayscale according to their weights
-                c = (((0.299 * r) + (0.587 * g) + (0.114 * b)) / 3)
+                c = (((0.299 * r) + (0.587 * g) + (0.114 * b)))
                 csv_output.writerow([filename, c])
