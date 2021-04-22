@@ -31,7 +31,7 @@ def build_network(x_train, y_train, x_test, y_test):
             A class object that holds the trained model.
     '''
     # Build the model
-    model = RandomForestRegressor(n_estimators=10000, random_state=0)
+    model = RandomForestRegressor(n_estimators=1000, random_state=1)
     model.fit(x_train, y_train)
     y_predict = model.predict(x_test)
 
@@ -50,7 +50,7 @@ def build_network(x_train, y_train, x_test, y_test):
     return model
 
 def pH_predict(x_train, y_train, x):
-    model = RandomForestRegressor(n_estimators=10000, random_state=0)
+    model = RandomForestRegressor(n_estimators=1000, random_state=1)
     model.fit(x_train, y_train)
     pH_estimate = model.predict(np.array([x]).reshape(1, 1))
     return pH_estimate
