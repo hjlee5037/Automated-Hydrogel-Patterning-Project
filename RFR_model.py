@@ -15,7 +15,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 
-
 def build_network(x_train, y_train, x_test, y_test):
     '''
     This function holds the neural network model.
