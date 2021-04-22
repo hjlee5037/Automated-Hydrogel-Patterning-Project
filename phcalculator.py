@@ -15,12 +15,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from PIL import Image
 import numpy as np
-
+import joblib
 
 def build_network(x_train, y_train, x_test, y_test):
     '''
     This function holds the neural network model.
-    After building the model, the model is then trained and performance is outputted.
+    After building the model, the model is then trained, saved, and its performance is outputted.
 
     **Parameters**
         x_train: *numpy*
@@ -39,7 +39,9 @@ def build_network(x_train, y_train, x_test, y_test):
     model = RandomForestRegressor(n_estimators=100, random_state=1)
     model.fit(x_train, y_train)
     y_predict = model.predict(x_test)
-
+    # Save the model
+    joblib.dump(model, "./pH_model.joblib")
+    print("Model saved.")
     # calculate MAE and MSE of model
     MAE = metrics.mean_absolute_error(y_test, y_predict)
     print('MAE: ' + str(MAE))
@@ -55,9 +57,9 @@ def build_network(x_train, y_train, x_test, y_test):
     fig.savefig("PH_performance.png")
     return model
 
-def pH_predict(x_train, y_train, x):
+def pH_predict(x):
     '''
-    This function uses the same model to predict pH of an input x value.
+    This function loads the saved model to predict pH of an input x value.
 
     **Parameters**
         x_train: *numpy*
@@ -70,9 +72,10 @@ def pH_predict(x_train, y_train, x):
         pH_estimate:
             Estimated pH value.
     '''
-    model = RandomForestRegressor(n_estimators=100, random_state=1)
-    model.fit(x_train, y_train)
-    pH_estimate = model.predict(np.array([x]).reshape(1, 1))
+    # Load the saved model.
+    loaded_model = joblib.load("./pH_model.joblib")
+    # Use model to predict pH of input value.
+    pH_estimate = loaded_model.predict(np.array([x]).reshape(1, 1))
     return pH_estimate
 
 def recognize_pH():
