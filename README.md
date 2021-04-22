@@ -8,7 +8,7 @@ The goal of this project is to use Python to generate a calculator that could id
 3) 
 
 
-Output:
+#Output:
 In [1]: run phcalc_rfr.py
 
 printing train dataset: 
@@ -38,11 +38,11 @@ printing train dataset:
 MAE: 0.00095624643043381
 
 MSE: 0.0029855053851068074
-#  Sample outputs of image recognition
 print pH prediction:
 5.5.png, [5.43535556]
+
 5.3.png, [5.25073928]
 
-Scatter plot of model performance:
+#Scatter plot of model performance:
 
 ![PH_performance_example](https://user-images.githubusercontent.com/82513993/115661940-422b4880-a30c-11eb-8e71-67c570d59da9.png)
