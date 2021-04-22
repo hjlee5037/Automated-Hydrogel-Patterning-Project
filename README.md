@@ -1,7 +1,7 @@
 # pH calculator
 Heon Joon Lee (hlee260@jhmi.edu) EN 540.635 Software Carpentry
 
-The goal of this project is to use Python to generate a neural network that could identify the RGB values from a specific color (e.g. indicated using pH paper) and calculate the pH of that specific color using the model. To design this set of code we need to:
+The goal of this project is to use Python to generate a neural network that could identify the RGB values from a specific color (e.g. indicated using pH paper) and calculate the pH of that specific color using the model.
 
 # Requirements
 Python 3
