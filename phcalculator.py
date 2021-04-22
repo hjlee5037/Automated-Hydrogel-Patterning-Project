@@ -77,8 +77,10 @@ def pH_predict(x_train, y_train, x):
 
 def recognize_pH():
     '''
-    This function retreives RGB of a certain image, EDIT FROM HERE
-
+    This function retreives RGB from a single pixel of a certain image,
+    calculates the weighted grayscale of the image, then inputs the normalized value
+    into pH_predict function. The predicted pH value for the image is printed out.
+    
     **Parameters**
         x_train: *numpy*
             The set of training data.
@@ -90,22 +92,20 @@ def recognize_pH():
         pH_estimate:
             Estimated pH value.
     '''
-    filename = '0.png'
+    #input of filename
+    filename = '9.7.png'
     img = Image.open(filename)
-    # Load the pixel info, get a tuple of the x and y dimensions of the image
-    width, height = img.size
-    for x in range(width):
-        for y in range(height):
-            pxl = img.load()
-            # Parallel to x values from data we calculate weighted grayscale (c) of each image.
-            c = (((0.299 * int(pxl[x, y][0])) + (0.587 * int(pxl[x, y][1]))
-                  + (0.114 * int(pxl[x, y][2]))) / 3)
-            # Normalize the c value between 0 and 1.
-            c_norm = int(c) / 255
-            predicted_pH = pH_predict(x_train, y_train, c_norm)
-            # Print the file name and predicted pH value according to the model.
-            print(f'{filename}, {predicted_pH}')
-            return
+    # Parallel to x values from data, we calculate weighted grayscale (c) of a single pixel in a image.
+    pxl = img.getpixel((1,1))
+    c = (((0.299 * int(pxl[0])) + (0.587 * int(pxl[1]))
+            + (0.114 * int(pxl[2]))))
+    # Normalize the c value between 0 and 1.
+    c_norm = int(c) / 255
+    #Use pH_predict to calculate pH using model and c_norm.
+    predicted_pH = pH_predict(x_train, y_train, c_norm)
+    # Print the file name and predicted pH value according to the model.
+    print(f'{filename}, {predicted_pH}')
+    return
 
 if __name__ == '__main__':
     # Suppress TensorFlow warnings
