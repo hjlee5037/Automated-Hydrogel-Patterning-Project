@@ -53,10 +53,12 @@ MSE: 0.0029855053851068074
 pH prediction:
 
 5.5.png, [5.43350742]
+
 ![5 5](https://user-images.githubusercontent.com/82513993/115789826-c07efd80-a393-11eb-84a7-277d0a85b926.png)
 
 
 5.8.png, [5.73453873]
+
 ![5 8](https://user-images.githubusercontent.com/82513993/115789815-bd840d00-a393-11eb-9497-77836c116ea0.png)
 
 
