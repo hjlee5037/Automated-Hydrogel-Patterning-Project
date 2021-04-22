@@ -45,6 +45,7 @@ def recognize_pH(filename):
     predicted_pH = pH_predict(c_norm)
     # Print the file name and predicted pH value according to the model.
     print(f'{filename}, {predicted_pH}')
+    img.show()
     return
 
 
