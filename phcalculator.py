@@ -95,7 +95,7 @@ def recognize_pH():
         pH_estimate:
             Estimated pH value.
     '''
-    #input of filename
+    #input of file name of image with specific pH value and single color.
     filename = '9.7.png'
     img = Image.open(filename)
     # Parallel to x values from data, we calculate weighted grayscale (c) of a single pixel in a image.
@@ -105,7 +105,7 @@ def recognize_pH():
     # Normalize the c value between 0 and 1.
     c_norm = int(c) / 255
     #Use pH_predict to calculate pH using model and c_norm.
-    predicted_pH = pH_predict(x_train, y_train, c_norm)
+    predicted_pH = pH_predict(c_norm)
     # Print the file name and predicted pH value according to the model.
     print(f'{filename}, {predicted_pH}')
     return
