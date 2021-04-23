@@ -20,31 +20,27 @@ A collection of images for colors of varying pHs (from a pH scale, for instance)
 # Output of RFR_model.py:
 In [1]: run phcalc_rfr.py
 
-printing train dataset: 
+Showing train dataset: 
 
-[[0.16840261]
- [0.17898431]
- [0.12039739]
+[[0.3616549 ]
+ [0.3663451 ]
+ [0.55890588]
  ...
- [0.10928889]
- [0.21052941]
- [0.16117778]] 
+ [0.26102353]
+ [0.37072549]
+ [0.54860784]] [11.8 11.9  6.6 ... 14.9 13.4  1.6]
  
- [10.  1.  0. ... 11.  5.  7.]
- 
- printing test dataset: 
- 
-[[0.12039739]
- [0.28255294]
- [0.24054641]
+Showing test dataset: 
+
+[[0.5130902 ]
+ [0.54434118]
+ [0.52597647]
  ...
- [0.11503529]
- [0.11503529]
- [0.17221699]]
+ [0.51929804]
+ [0.35900392]
+ [0.7244902 ]] [ 7.7  9.4  8.1 ...  7.2 13.7  4.6]
  
- [ 0.  3.  4. ... 13. 13.  9.]
- 
- Model saved.
+Model saved as pH_model.joblib.
 
 MAE: 0.00095624643043381
 
