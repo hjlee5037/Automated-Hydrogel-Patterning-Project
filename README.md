@@ -17,7 +17,7 @@ A collection of images for colors of varying pHs (from a pH scale, for instance)
 6) We can also retreive the mean absolute error (MAE) and mean squared error values (MAE) for our model.
 7) We use our code to input an image file, calculate the weighted grayscale after getting RGB values of a single pixel sample, and use the model to predict the pH of the image.
 
-# Output:
+# Output of RFR_model.py:
 In [1]: run phcalc_rfr.py
 
 printing train dataset: 
@@ -50,24 +50,14 @@ MAE: 0.00095624643043381
 
 MSE: 0.0029855053851068074
 
-pH prediction:
-
-5.5.png, [5.43350742]
-
-![5 5](https://user-images.githubusercontent.com/82513993/115789826-c07efd80-a393-11eb-84a7-277d0a85b926.png)
-
-
-5.8.png, [5.73453873]
-
-![5 8](https://user-images.githubusercontent.com/82513993/115789815-bd840d00-a393-11eb-9497-77836c116ea0.png)
-
-
-# Scatter plot of model performance:
-
 ![PH_performance_example](https://user-images.githubusercontent.com/82513993/115661940-422b4880-a30c-11eb-8e71-67c570d59da9.png)
+
+# Output of pH_predict.py
+
 
 # References:
 
 1. https://www.javaer101.com/en/article/34524053.html
 2. https://www.geeksforgeeks.org/random-forest-regression-in-python/
 3. https://medium.com/ampersand-academy/random-forest-regression-using-python-sklearn-from-scratch-9ad7cf2ec2bb
+4. https://stackoverflow.com/questions/56787999/python-opencv-realtime-get-rgb-values-when-mouse-is-clicked
