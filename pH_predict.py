@@ -1,12 +1,9 @@
 '''
-This function is used to open up a pH scale image, and
-predict the pH of clicked regions using the model from
-RFR_model.py.
+This function is used to open up a pH scale image, and predict the pH of clicked regions using the model from RFR_model.py.
 '''
 import cv2
 import joblib
 import numpy as np
-
 
 def pH_predict(c_norm):
     '''
