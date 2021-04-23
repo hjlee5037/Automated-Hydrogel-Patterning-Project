@@ -15,7 +15,7 @@ A collection of images for colors of varying pHs (from a pH scale, for instance)
 4) We build a machine learning model based on random forest regression. This constructs a multitude of decision trees and outputs the classifcation or average prediction of each tree. The model is saved as a joblib file (pH_model.joblib) and will be used to predict pH of colors later on.
 5) We retreive predicted y values (pH's) based on x_test, and compare with the pre-defined y_test using a scatter plot.
 6) We can also retreive the mean absolute error (MAE) and mean squared error values (MAE) for our model.
-7) We use our code to input an image file, calculate the weighted grayscale after getting RGB values of a single pixel sample, and use the model to predict the pH of the image.
+7) We use pH_predict.py open an image of a pH scale (pH_scale.png), calculate the weighted grayscale after getting RGB values of the clicked area, and use the model to predict the pH of the click.
 
 # Output of RFR_model.py:
 In [1]: run phcalc_rfr.py
@@ -49,10 +49,15 @@ printing train dataset:
 MAE: 0.00095624643043381
 
 MSE: 0.0029855053851068074
+
 ![PH_performance_example](https://user-images.githubusercontent.com/82513993/115661940-422b4880-a30c-11eb-8e71-67c570d59da9.png)
 
 # Output of pH_predict.py
+In [2]: run pH_predict.py
 
+<img width="1023" alt="Screen Shot 2021-04-22 at 10 45 43 PM" src="https://user-images.githubusercontent.com/82513993/115810917-c6d59f80-a3bc-11eb-9ab1-8f4c48e6aa3c.png">
+
+pH of clicked region:  [7.66610281]
 
 # References:
 
@@ -60,3 +65,4 @@ MSE: 0.0029855053851068074
 2. https://www.geeksforgeeks.org/random-forest-regression-in-python/
 3. https://medium.com/ampersand-academy/random-forest-regression-using-python-sklearn-from-scratch-9ad7cf2ec2bb
 4. https://stackoverflow.com/questions/56787999/python-opencv-realtime-get-rgb-values-when-mouse-is-clicked
+5. https://docs.opencv.org/3.4/d4/da8/group__imgcodecs.html#ga61d9b0126a3e57d9277ac48327799c80
