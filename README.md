@@ -9,7 +9,7 @@ Install libraries: Keras, Tensorflow, PIL, skscikit-learn, os, pandas, matplotli
 A collection of images for colors of varying pHs (from a pH scale, for instance). These images should be labeled with specific pH values.
 
 # Workflow
-1) Using datagenerator.py RGB values of each pH color are retreived from a pre-existing pH scale (.png). Specifically, we cropped out small images of each color from the scale, and generated their RGB values, calculated the weighted grayscale value (c = 0.299 * R + 0.587 * G + 0.114 * B). These are organized into a csv file (dataset.csv) in order to train/test the model. 
+1) Using datagenerator.py RGB values of each pH color are retreived from a pre-existing pH scale (.png). Specifically, we cropped out small images of each color from the scale, and generated their RGB values, calculated the weighted grayscale value with the luminance equation (c = 0.299 * R + 0.587 * G + 0.114 * B). These are organized into a csv file (dataset.csv) in order to train/test the model. 
 2) Use the find command in order to replace the text .png with nothing. This way we have only the pH values and their corresponding grayscale values.
 3) We use pHcalculator.py to build a machine learning model and predict the pH value of an input image. 80% of the dataset.csv data is used for training the model, while the remaining 20% is used for testing. 
 4) We build a machine learning model based on random forest regression. This constructs a multitude of decision trees and outputs the classifcation or average prediction of each tree. The model is saved as a joblib file (pH_model.joblib) and will be used to predict pH of colors later on.
