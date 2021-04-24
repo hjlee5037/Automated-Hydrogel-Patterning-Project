@@ -5,7 +5,7 @@ The goal of this project is to use Python to generate a model that could identif
 
 # Requirements
 Python 3
-Install libraries: Keras, Tensorflow, PIL, skscikit-learn, os, pandas, matplotlib, numpy, joblib.
+Install libraries: Keras, Tensorflow, PIL, skscikit-learn, os, pandas, matplotlib, numpy, joblib, opencv (cv2).
 A collection of images for colors of varying pHs (from a pH scale, for instance). These images should be labeled with specific pH values.
 
 # Workflow
